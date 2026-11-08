@@ -99,14 +99,11 @@ Valide les graphes et paramètres, calcule leur signature et définit les param�
 
 ### `core/search/trace.py`
 
-Contient `SearchNode` et `TraceRecorder`. Les algorithmes enregistrent leur
-trace pendant l'exécution : nœuds visités, frontière, parents, successeurs
-et événements de recherche.
+Contient `SearchNode` et `TraceRecorder`. Les algorithmes enregistrent leur trace pendant l'exécution : nœuds visités, frontière, parents, successeurs et événements de recherche.
 
 ### `core/search/uninformed.py`
 
 Implémente les six algorithmes non informés :
-
 - BFS;
 - UCS;
 - DFS itératif;
@@ -117,31 +114,22 @@ Implémente les six algorithmes non informés :
 ### `core/search/informed.py`
 
 Implémente les quatre algorithmes informés :
-
 - Greedy;
 - A*;
 - SBA*;
 - RBFS.
 
-Les variantes suivent les règles définies dans les spécifications du projet,
-notamment les limites mémoire, les bornes de profondeur et les limites
-d'itérations.
-
 ### `core/search/registry.py`
 
-Registre central des dix algorithmes. `run_algorithm` valide les entrées,
-lance l'algorithme et mesure son temps. `compare_algorithms` permet de
-comparer plusieurs résultats.
+Registre central des dix algorithmes. `run_algorithm` valide les entrées, lance l'algorithme et mesure son temps. `compare_algorithms` permet de comparer plusieurs résultats.
 
 ### `core/search/heuristics.py`
 
-Calcule les vrais coûts vers le but et vérifie l'admissibilité ainsi que la
-consistance des heuristiques.
+Calcule les vrais coûts vers le but et vérifie l'admissibilité ainsi que la consistance des heuristiques.
 
 ### `core/search/io.py`
 
-Enregistre et charge les graphes au format JSON, avec validation des sommets,
-arcs, coûts, états et heuristiques.
+Enregistre et charge les graphes au format JSON, avec validation des sommets, arcs, coûts, états et heuristiques.
 
 ### `core/search/examples.py`
 
@@ -151,14 +139,10 @@ Contient les sept graphes d'exemple :
 ### `core/search/visualization.py`
 
 Contient toute la visualisation graphique :
-
 - disposition du graphe;
 - couleurs des nœuds selon leur rôle;
 - affichage des arcs, coûts et heuristiques;
 - dessin de l'arbre de preuve du chaînage arrière avec NetworkX.
-
-NetworkX ne lance aucun algorithme de recherche : il sert uniquement à
-dessiner les graphes et l'arbre de preuve.
 
 ### `core/export_examples.py`
 
@@ -172,8 +156,7 @@ python -m core.export_examples
 
 ### `ui/state.py`
 
-Initialise et conserve l'état Streamlit : page courante, base de
-connaissances, graphe, paramètres, résultats et étape affichée.
+Initialise et conserve l'état Streamlit : page courante, base de connaissances, graphe, paramètres, résultats et étape affichée.
 
 ### `ui/theme.py`
 
@@ -181,8 +164,7 @@ Contient le style général et les en-têtes des pages.
 
 ### `ui/components.py`
 
-Contient les composants réutilisables : affichage des erreurs, faits,
-règles, résultats et statistiques.
+Contient les composants réutilisables : affichage des erreurs, faits, règles, résultats et statistiques.
 
 ### `ui/home.py`
 
@@ -190,31 +172,25 @@ Affiche le menu principal et les deux cartes d'accès aux modules.
 
 ### `ui/expert_page.py`
 
-Affiche le module expert : choix du but et de la méthode, exécution pas à
-pas, édition des faits et règles, import/export JSON et arbre de preuve
-NetworkX.
+Affiche le module expert : choix du but et de la méthode, exécution pas à pas, édition des faits et règles, import/export JSON et arbre de preuve NetworkX.
 
 ### `ui/search_page.py`
 
-Affiche l'éditeur de graphe, la sélection de l'algorithme, les paramètres,
-la visualisation, les traces, les statistiques et la comparaison.
+Affiche l'éditeur de graphe, la sélection de l'algorithme, les paramètres, la visualisation, les traces, les statistiques et la comparaison.
 
 ### `ui/quit_page.py`
 
-Affiche un message de sortie. Streamlit ne peut pas arrêter son serveur
-depuis la page.
+Affiche un message de sortie. Streamlit ne peut pas arrêter son serveur depuis la page.
 
 ## 6. Données et tests
 
 ### `data/examples/`
 
-Contient les JSON générés pour les huit bases de connaissances et les sept
-graphes d'exemple.
+Contient les JSON générés pour les huit bases de connaissances et les sept graphes d'exemple.
 
 ### `tests/`
 
 Les tests vérifient :
-
 - les modèles et validations;
 - le parsing;
 - les deux moteurs experts;
@@ -224,19 +200,14 @@ Les tests vérifient :
 - les formats JSON;
 - les contraintes d'architecture, notamment l'absence de recherche NetworkX.
 
-Les dossiers `__pycache__` et `.pytest_cache` sont des caches générés
-automatiquement et ne sont pas nécessaires au dépôt.
-
 ## 7. Flux d'utilisation
 
 ### Raisonnement expert
 
 1. L'utilisateur choisit une base, un but et une méthode.
-2. Le moteur calcule tout le résultat et sa trace lorsque **Lancer** est
-   utilisé.
+2. Le moteur calcule tout le résultat et sa trace lorsque **Lancer** est utilisé.
 3. Les boutons de navigation affichent les étapes déjà calculées.
-4. En chaînage arrière, l'arbre NetworkX place le but à la racine et les
-   prémisses comme descendants.
+4. En chaînage arrière, l'arbre NetworkX place le but à la racine et les prémisses comme descendants.
 
 ### Recherche
 
