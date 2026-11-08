@@ -92,7 +92,7 @@ def _select_message(
 
 
 def greedy(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Greedy best-first search (Ch3 p.55)."""
+    """Greedy best-first search."""
     rec = TraceRecorder(graph, "greedy", use=("h",))
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(
@@ -390,7 +390,7 @@ def _best_first_core(
 
 
 def astar(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """A* search (Ch3 p.61)."""
+    """A* search."""
     rec = TraceRecorder(graph, "astar", use=("g", "h", "f"))
     counters = SearchCounters(nodes_generated=1)
     status, goal_node, message = _best_first_core(
@@ -402,7 +402,7 @@ def astar(graph: SearchGraph, params: SearchParams) -> SearchResult:
 
 
 def sba_star(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """SBA* (simplified SMA*), Ch3 p.64."""
+    """SBA*"""
     rec = TraceRecorder(graph, "sba_star", use=("g", "h", "f"))
     counters = SearchCounters(nodes_generated=1)
     status, goal_node, message = _best_first_core(
@@ -421,7 +421,7 @@ def sba_star(graph: SearchGraph, params: SearchParams) -> SearchResult:
 
 
 def rbfs(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Recursive best-first search (Ch3 p.66)."""
+    """Recursive best-first search """
     rec = TraceRecorder(graph, "rbfs", use=("g", "h", "f"))
     counters = SearchCounters(nodes_generated=1)
     stack: list[str] = []

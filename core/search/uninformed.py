@@ -1,4 +1,4 @@
-"""Uninformed search algorithms (AS B.1–B.6, Ch3 p.32–48)."""
+"""Uninformed search algorithms."""
 
 from __future__ import annotations
 
@@ -48,7 +48,6 @@ def _init_message(
 def _select_message(
     iteration: int, node: SearchNode, generated: list[GeneratedEntry]
 ) -> str:
-    """Build the AS §0.5 select message."""
     added = [entry.state for entry in generated if entry.status == "added"]
     skipped = [
         entry.state
@@ -66,7 +65,6 @@ def _select_message(
 
 
 def _goal_message(iteration: int, node: SearchNode) -> str:
-    """Build the AS §0.5 goal_found message."""
     path = " → ".join(path_from_node(node))
     return (
         f"Itération {iteration} : on retire {node.state} de la frontière : "
@@ -92,14 +90,12 @@ def _recursive_goal_message(
 
 
 def _fail_message(graph: SearchGraph) -> str:
-    """Build the AS §0.5 frontier-empty failure message."""
     return (
         f"Frontière vide : aucun chemin de {graph.start} vers {graph.goal}."
     )
 
 
 def _cap_message(params: SearchParams) -> str:
-    """Build the AS §0.5 iteration-cap message."""
     return (
         f"Arrêt : limite de {params.max_iterations} itérations atteinte "
         f"(boucle probable)."
@@ -107,7 +103,6 @@ def _cap_message(params: SearchParams) -> str:
 
 
 def _cutoff_message(node: SearchNode, limit: int, limit_max: int) -> str:
-    """Build the AS §0.5 cutoff message."""
     return (
         f"Profondeur {limit} > limite {limit_max} : coupure sur "
         f"{node.state} (non testé)."
@@ -115,12 +110,11 @@ def _cutoff_message(node: SearchNode, limit: int, limit_max: int) -> str:
 
 
 def _backtrack_message(node: SearchNode) -> str:
-    """Build the AS B.4 backtrack message."""
     return f"Plus de successeur non visité pour {node.state} : retour."
 
 
 def bfs(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Breadth-first search, improved version (Ch3 p.32)."""
+    """Breadth-first search, improved version"""
     rec = TraceRecorder(graph, "bfs", use=("depth",))
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(graph.start)
@@ -210,7 +204,7 @@ def bfs(graph: SearchGraph, params: SearchParams) -> SearchResult:
 
 
 def ucs(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Uniform-cost search, stable cost ordering (Ch3 p.35)."""
+    """Uniform-cost search, stable cost ordering """
     rec = TraceRecorder(graph, "ucs", use=("g", "depth"))
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(graph.start)
@@ -306,7 +300,7 @@ def ucs(graph: SearchGraph, params: SearchParams) -> SearchResult:
 
 
 def dfs(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Depth-first search with a stack whose top is index 0 (Ch3 p.40)."""
+    """Depth-first search with a stack whose top is index 0 ."""
     rec = TraceRecorder(graph, "dfs", use=("depth",))
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(graph.start)
@@ -429,7 +423,7 @@ def _entry_statuses(
 def dfs_recursive(
     graph: SearchGraph, params: SearchParams
 ) -> SearchResult:
-    """Depth-first search, recursive version (Ch3 p.42)."""
+    """Depth-first search, recursive version"""
     rec = TraceRecorder(graph, "dfs_recursive", use=())
     counters = SearchCounters(nodes_generated=1)
     stack: list[str] = []
@@ -551,7 +545,7 @@ def _dls_core(
     counter: _CallCounter,
     iteration: Optional[int],
 ) -> Optional[SearchNode]:
-    """Recursive limited-depth search shared by DLS and IDS (Ch3 p.45)."""
+    """Recursive limited-depth search shared by DLS and IDS."""
     stack: list[str] = []
 
     def call(node: SearchNode, limit: int) -> Optional[SearchNode]:
@@ -650,7 +644,7 @@ def _dls_core(
 
 
 def dls(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Depth-limited search (Ch3 p.45)."""
+    """Depth-limited search."""
     rec = TraceRecorder(graph, "dls", use=())
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(graph.start)
@@ -697,7 +691,7 @@ def dls(graph: SearchGraph, params: SearchParams) -> SearchResult:
 
 
 def ids(graph: SearchGraph, params: SearchParams) -> SearchResult:
-    """Iterative deepening search (Ch3 p.48)."""
+    """Iterative deepening search """
     rec = TraceRecorder(graph, "ids", use=())
     counters = SearchCounters(nodes_generated=1)
     root = SearchNode(graph.start)

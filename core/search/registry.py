@@ -188,7 +188,7 @@ ALGORITHMS: dict[str, AlgorithmInfo] = {
     ),
     "sba_star": AlgorithmInfo(
         key="sba_star",
-        label="SBA* (SMA* simplifié du cours)",
+        label="SBA*",
         category="informed",
         runner=sba_star,
         needs_heuristic=True,

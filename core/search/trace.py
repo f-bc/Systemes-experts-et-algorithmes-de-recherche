@@ -25,7 +25,7 @@ ALGO_META: dict[str, tuple[str, Literal["uninformed", "informed"]]] = {
     "ids": ("Approfondissement itératif (IDS)", "uninformed"),
     "greedy": ("Meilleur d'abord / Gloutonne (Greedy)", "informed"),
     "astar": ("A*", "informed"),
-    "sba_star": ("SBA* (SMA* simplifié du cours)", "informed"),
+    "sba_star": ("SBA*", "informed"),
     "rbfs": ("RBFS (Recursive Best-First Search)", "informed"),
 }
 

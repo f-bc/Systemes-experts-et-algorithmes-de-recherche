@@ -97,7 +97,6 @@ def node_roles(
     result: Optional[SearchResult],
     show_final_path: bool,
 ) -> dict[str, str]:
-    """Return the fill role of every vertex by the PS §8.4 precedence."""
     roles = {vertex: "default" for vertex in graph.vertices}
     if step is None:
         return roles
