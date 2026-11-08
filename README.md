@@ -66,3 +66,4 @@ tests/                  tests unitaires et d'architecture
 - Code source dans `core/`, `ui/` et `app.py`.
 - Documentation.
 - Exemples JSON dans `data/examples/`.
+- Démonstration de l’application, sous la forme d’une courte vidéo, illustrant les deux modules.
