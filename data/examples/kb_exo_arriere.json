@@ -1,0 +1,59 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Exercice chaînage arrière",
+  "facts": [
+    "E",
+    "F"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "E",
+        "B"
+      ],
+      "then": "C"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "B",
+        "D"
+      ],
+      "then": "A"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "J",
+        "H"
+      ],
+      "then": "B"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "D",
+        "E"
+      ],
+      "then": "B"
+    },
+    {
+      "id": "R5",
+      "if": [
+        "B",
+        "D"
+      ],
+      "then": "F"
+    },
+    {
+      "id": "R6",
+      "if": [
+        "E",
+        "F"
+      ],
+      "then": "D"
+    }
+  ]
+}

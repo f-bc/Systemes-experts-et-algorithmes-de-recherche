@@ -1,0 +1,81 @@
+{
+  "format": "ensi-ai-graph",
+  "version": 1,
+  "name": "DLS et liste des visités",
+  "vertices": [
+    "S",
+    "A",
+    "B",
+    "D",
+    "C",
+    "T"
+  ],
+  "edges": [
+    {
+      "from": "S",
+      "to": "A",
+      "cost": 1
+    },
+    {
+      "from": "S",
+      "to": "B",
+      "cost": 1
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "cost": 1
+    },
+    {
+      "from": "D",
+      "to": "C",
+      "cost": 1
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "cost": 1
+    },
+    {
+      "from": "C",
+      "to": "T",
+      "cost": 1
+    }
+  ],
+  "heuristics": {
+    "S": 3,
+    "A": 3,
+    "B": 2,
+    "C": 1,
+    "D": 2,
+    "T": 0
+  },
+  "start": "S",
+  "goal": "T",
+  "positions": {
+    "S": [
+      0,
+      1
+    ],
+    "A": [
+      1,
+      2
+    ],
+    "D": [
+      2,
+      2
+    ],
+    "B": [
+      1,
+      0
+    ],
+    "C": [
+      3,
+      1
+    ],
+    "T": [
+      4,
+      1
+    ]
+  }
+}

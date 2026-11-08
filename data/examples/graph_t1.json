@@ -1,0 +1,87 @@
+{
+  "format": "ensi-ai-graph",
+  "version": 1,
+  "name": "Arbre RBFS (Ch3 p.67)",
+  "vertices": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "G",
+    "F"
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "cost": 5
+    },
+    {
+      "from": "A",
+      "to": "C",
+      "cost": 10
+    },
+    {
+      "from": "B",
+      "to": "D",
+      "cost": 5
+    },
+    {
+      "from": "B",
+      "to": "E",
+      "cost": 10
+    },
+    {
+      "from": "C",
+      "to": "G",
+      "cost": 20
+    },
+    {
+      "from": "E",
+      "to": "F",
+      "cost": 45
+    }
+  ],
+  "heuristics": {
+    "A": 30,
+    "B": 20,
+    "C": 25,
+    "D": 40,
+    "E": 30,
+    "F": 45,
+    "G": 0
+  },
+  "start": "A",
+  "goal": "G",
+  "positions": {
+    "A": [
+      2,
+      2
+    ],
+    "B": [
+      1,
+      1
+    ],
+    "C": [
+      3,
+      1
+    ],
+    "D": [
+      0.3,
+      0
+    ],
+    "E": [
+      1.7,
+      0
+    ],
+    "G": [
+      3,
+      0
+    ],
+    "F": [
+      1.7,
+      -1
+    ]
+  }
+}

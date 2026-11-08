@@ -1,0 +1,51 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Exercice chaînage avant",
+  "facts": [
+    "E",
+    "F"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "A",
+        "B"
+      ],
+      "then": "C"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "F",
+        "D"
+      ],
+      "then": "A"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "D",
+        "E"
+      ],
+      "then": "B"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "B",
+        "D"
+      ],
+      "then": "F"
+    },
+    {
+      "id": "R5",
+      "if": [
+        "E",
+        "F"
+      ],
+      "then": "D"
+    }
+  ]
+}

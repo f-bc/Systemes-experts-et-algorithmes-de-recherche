@@ -1,0 +1,43 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Diagnostic",
+  "facts": [
+    "fièvre",
+    "toux",
+    "fatigue"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "fièvre",
+        "toux"
+      ],
+      "then": "syndrome grippal"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "syndrome grippal",
+        "fatigue"
+      ],
+      "then": "grippe probable"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "éternuements",
+        "nez qui coule"
+      ],
+      "then": "rhume probable"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "grippe probable"
+      ],
+      "then": "repos conseillé"
+    }
+  ]
+}

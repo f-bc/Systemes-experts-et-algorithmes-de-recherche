@@ -1,0 +1,36 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Animaux",
+  "facts": [
+    "animal a des plumes",
+    "animal a un long cou",
+    "animal a de longues pattes"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "animal vole",
+        "animal pond des œufs"
+      ],
+      "then": "animal est un oiseau"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "animal a des plumes"
+      ],
+      "then": "animal est un oiseau"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "animal est un oiseau",
+        "animal a un long cou",
+        "animal a de longues pattes"
+      ],
+      "then": "animal est une autruche"
+    }
+  ]
+}

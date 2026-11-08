@@ -1,0 +1,54 @@
+{
+  "format": "ensi-ai-graph",
+  "version": 1,
+  "name": "Mémoire limitée SBA*",
+  "vertices": [
+    "S",
+    "B",
+    "C",
+    "T"
+  ],
+  "edges": [
+    {
+      "from": "S",
+      "to": "B",
+      "cost": 2
+    },
+    {
+      "from": "S",
+      "to": "C",
+      "cost": 3
+    },
+    {
+      "from": "C",
+      "to": "T",
+      "cost": 3
+    }
+  ],
+  "heuristics": {
+    "S": 6,
+    "B": 1,
+    "C": 4,
+    "T": 0
+  },
+  "start": "S",
+  "goal": "T",
+  "positions": {
+    "S": [
+      0,
+      1
+    ],
+    "B": [
+      2,
+      2
+    ],
+    "C": [
+      2,
+      0
+    ],
+    "T": [
+      4,
+      0
+    ]
+  }
+}

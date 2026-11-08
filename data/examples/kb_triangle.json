@@ -1,0 +1,35 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Formes géométriques",
+  "facts": [
+    "ordre vaut 3",
+    "angle droit",
+    "deux côtés de même taille"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "ordre vaut 3"
+      ],
+      "then": "triangle"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "triangle",
+        "angle droit"
+      ],
+      "then": "triangle rectangle"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "triangle",
+        "deux côtés de même taille"
+      ],
+      "then": "triangle isocèle"
+    }
+  ]
+}

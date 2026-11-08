@@ -1,0 +1,67 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Tarte aux fruits",
+  "facts": [
+    "pommes",
+    "œufs",
+    "poires",
+    "abricots",
+    "farine",
+    "beurre",
+    "sucre",
+    "sel"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "farine",
+        "beurre",
+        "œufs",
+        "sel"
+      ],
+      "then": "pâte"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "pommes",
+        "sucre"
+      ],
+      "then": "pommes sucrées"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "pommes sucrées",
+        "pâte"
+      ],
+      "then": "tarte aux pommes"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "abricots",
+        "pâte"
+      ],
+      "then": "tarte aux abricots"
+    },
+    {
+      "id": "R5",
+      "if": [
+        "poires",
+        "pâte"
+      ],
+      "then": "tarte aux poires"
+    },
+    {
+      "id": "R6",
+      "if": [
+        "cerises",
+        "pâte"
+      ],
+      "then": "tarte aux cerises"
+    }
+  ]
+}

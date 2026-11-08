@@ -1,0 +1,70 @@
+{
+  "format": "ensi-ai-graph",
+  "version": 1,
+  "name": "Piège pour la gloutonne",
+  "vertices": [
+    "S",
+    "A",
+    "B",
+    "C",
+    "T"
+  ],
+  "edges": [
+    {
+      "from": "S",
+      "to": "A",
+      "cost": 10
+    },
+    {
+      "from": "S",
+      "to": "B",
+      "cost": 2
+    },
+    {
+      "from": "S",
+      "to": "C",
+      "cost": 3
+    },
+    {
+      "from": "A",
+      "to": "T",
+      "cost": 10
+    },
+    {
+      "from": "B",
+      "to": "T",
+      "cost": 3
+    }
+  ],
+  "heuristics": {
+    "S": 6,
+    "A": 1,
+    "B": 5,
+    "C": 4,
+    "T": 0
+  },
+  "start": "S",
+  "goal": "T",
+  "positions": {
+    "S": [
+      0,
+      1
+    ],
+    "A": [
+      2,
+      2
+    ],
+    "B": [
+      2,
+      1
+    ],
+    "C": [
+      2,
+      0
+    ],
+    "T": [
+      4,
+      1
+    ]
+  }
+}

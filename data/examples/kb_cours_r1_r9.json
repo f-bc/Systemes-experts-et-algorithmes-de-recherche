@@ -1,0 +1,81 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Chaînage avant avec but",
+  "facts": [
+    "B",
+    "C"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "B",
+        "D",
+        "E"
+      ],
+      "then": "F"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "B",
+        "G"
+      ],
+      "then": "A"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "C",
+        "F"
+      ],
+      "then": "A"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "B"
+      ],
+      "then": "X"
+    },
+    {
+      "id": "R5",
+      "if": [
+        "D"
+      ],
+      "then": "E"
+    },
+    {
+      "id": "R6",
+      "if": [
+        "A",
+        "X"
+      ],
+      "then": "H"
+    },
+    {
+      "id": "R7",
+      "if": [
+        "C"
+      ],
+      "then": "D"
+    },
+    {
+      "id": "R8",
+      "if": [
+        "X",
+        "C"
+      ],
+      "then": "A"
+    },
+    {
+      "id": "R9",
+      "if": [
+        "X",
+        "B"
+      ],
+      "then": "D"
+    }
+  ]
+}

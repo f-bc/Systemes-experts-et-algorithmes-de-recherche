@@ -1,0 +1,22 @@
+{
+  "format": "ensi-ai-kb",
+  "version": 1,
+  "name": "Dépendance circulaire",
+  "facts": [],
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "A"
+      ],
+      "then": "B"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "B"
+      ],
+      "then": "A"
+    }
+  ]
+}
